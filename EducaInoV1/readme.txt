@@ -1,0 +1,1 @@
+A placa foi desativada pois estavamos com problemas na nossa CNC com o tamanho da ilha de isolação que era gerada pelo fritzing, a partir disso começamos a utilizar o eagle que oferecia um melhor suporte e configurações melhores para criação de placas.
