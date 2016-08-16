@@ -306,6 +306,22 @@ http://www.st.com&lt;p&gt;
 <text x="-2.54" y="3.81" size="1.016" layer="25" ratio="10">&gt;NAME</text>
 <text x="-2.54" y="-5.08" size="1.016" layer="27" ratio="10">&gt;VALUE</text>
 </package>
+<package name="22-23-2041">
+<description>.100" (2.54mm) Center Header - 4 Pin</description>
+<wire x1="-5.08" y1="3.175" x2="5.08" y2="3.175" width="0.254" layer="21"/>
+<wire x1="5.08" y1="3.175" x2="5.08" y2="1.27" width="0.254" layer="21"/>
+<wire x1="5.08" y1="1.27" x2="5.08" y2="-3.175" width="0.254" layer="21"/>
+<wire x1="5.08" y1="-3.175" x2="-5.08" y2="-3.175" width="0.254" layer="21"/>
+<wire x1="-5.08" y1="-3.175" x2="-5.08" y2="1.27" width="0.254" layer="21"/>
+<wire x1="-5.08" y1="1.27" x2="-5.08" y2="3.175" width="0.254" layer="21"/>
+<wire x1="-5.08" y1="1.27" x2="5.08" y2="1.27" width="0.254" layer="21"/>
+<pad name="1" x="-3.81" y="0" drill="1" shape="long" rot="R90"/>
+<pad name="2" x="-1.27" y="0" drill="1" shape="long" rot="R90"/>
+<pad name="3" x="1.27" y="0" drill="1" shape="long" rot="R90"/>
+<pad name="4" x="3.81" y="0" drill="1" shape="long" rot="R90"/>
+<text x="-5.08" y="3.81" size="1.016" layer="25" ratio="10">&gt;NAME</text>
+<text x="-5.08" y="-5.08" size="1.016" layer="27" ratio="10">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="MV">
@@ -344,6 +360,33 @@ http://www.st.com&lt;p&gt;
 </device>
 </devices>
 </deviceset>
+<deviceset name="22-23-2041" prefix="X">
+<description>.100" (2.54mm) Center Header - 4 Pin</description>
+<gates>
+<gate name="-1" symbol="MV" x="0" y="2.54" addlevel="always" swaplevel="1"/>
+<gate name="-2" symbol="M" x="0" y="0" addlevel="always" swaplevel="1"/>
+<gate name="-3" symbol="M" x="0" y="-2.54" addlevel="always" swaplevel="1"/>
+<gate name="-4" symbol="M" x="0" y="-5.08" addlevel="always" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="22-23-2041">
+<connects>
+<connect gate="-1" pin="S" pad="1"/>
+<connect gate="-2" pin="S" pad="2"/>
+<connect gate="-3" pin="S" pad="3"/>
+<connect gate="-4" pin="S" pad="4"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="MOLEX" constant="no"/>
+<attribute name="MPN" value="22-23-2041" constant="no"/>
+<attribute name="OC_FARNELL" value="1462920" constant="no"/>
+<attribute name="OC_NEWARK" value="38C0355" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -361,6 +404,7 @@ http://www.st.com&lt;p&gt;
 <part name="ALIMENTAÇAOEXTERNA" library="con-molex" deviceset="22-23-2021" device=""/>
 <part name="ENTRADA-RODAS-01" library="con-molex" deviceset="22-23-2021" device=""/>
 <part name="ENTRADA-RODAS-02" library="con-molex" deviceset="22-23-2021" device=""/>
+<part name="SENSOR" library="con-molex" deviceset="22-23-2041" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -375,6 +419,10 @@ http://www.st.com&lt;p&gt;
 <instance part="ENTRADA-RODAS-01" gate="-2" x="35.56" y="68.58" rot="R180"/>
 <instance part="ENTRADA-RODAS-02" gate="-1" x="93.98" y="68.58"/>
 <instance part="ENTRADA-RODAS-02" gate="-2" x="93.98" y="66.04"/>
+<instance part="SENSOR" gate="-1" x="30.48" y="101.6" rot="R180"/>
+<instance part="SENSOR" gate="-2" x="30.48" y="104.14" rot="R180"/>
+<instance part="SENSOR" gate="-3" x="30.48" y="106.68" rot="R180"/>
+<instance part="SENSOR" gate="-4" x="30.48" y="109.22" rot="R180"/>
 </instances>
 <busses>
 </busses>
