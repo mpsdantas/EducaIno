@@ -429,6 +429,163 @@ http://www.st.com&lt;p&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="buzzer">
+<description>&lt;b&gt;Speakers and Buzzers&lt;/b&gt;&lt;p&gt;
+&lt;ul&gt;Distributors:
+&lt;li&gt;Buerklin
+&lt;li&gt;Spoerle
+&lt;li&gt;Schukat
+&lt;/ul&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="EB2209A">
+<description>&lt;b&gt;BUZZER&lt;/b&gt;</description>
+<wire x1="6.731" y1="3.937" x2="8.509" y2="3.937" width="0.1524" layer="21"/>
+<wire x1="7.62" y1="4.826" x2="7.62" y2="3.048" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="11.303" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="10.668" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="2.54" width="0.1524" layer="21"/>
+<circle x="7.62" y="3.937" radius="1.397" width="0.1524" layer="21"/>
+<pad name="-" x="-7.493" y="0" drill="1.3208" diameter="2.54" shape="octagon"/>
+<pad name="+" x="7.493" y="0" drill="1.3208" diameter="2.54" shape="octagon"/>
+<text x="3.81" y="10.795" size="1.778" layer="25" ratio="10">&gt;NAME</text>
+<text x="-5.08" y="-7.62" size="1.778" layer="27" ratio="10">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="B">
+<wire x1="-2.54" y1="5.08" x2="5.08" y2="5.08" width="0.254" layer="94" curve="180"/>
+<wire x1="-2.54" y1="5.08" x2="1.27" y2="5.08" width="0.254" layer="94"/>
+<wire x1="1.27" y1="1.27" x2="1.27" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="2.54" y2="1.397" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="1.397" width="0.1524" layer="94"/>
+<text x="-2.54" y="6.35" size="1.778" layer="95">&gt;NAME</text>
+<text x="5.08" y="0" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="-" x="5.08" y="-2.54" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="+" x="-2.54" y="-2.54" visible="pad" length="short" direction="pas"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="EB2209A" prefix="SG">
+<description>&lt;b&gt;BUZZER&lt;/b&gt;&lt;p&gt; Source: Buerklin</description>
+<gates>
+<gate name="G$1" symbol="B" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="EB2209A">
+<connects>
+<connect gate="G$1" pin="+" pad="+"/>
+<connect gate="G$1" pin="-" pad="-"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="resistor-power">
+<description>&lt;b&gt;Vitrohm Power Resistors&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="TO-247-2V">
+<description>&lt;b&gt;TO-247 Style  Power Package&lt;/b&gt; vertical mounting&lt;p&gt;
+Source: www.token.com.tw .. power-resistor-rmg100pdf</description>
+<wire x1="-7.9" y1="3.075" x2="7.9" y2="3.075" width="0.2032" layer="21"/>
+<wire x1="-7.9" y1="-1.935" x2="-7.9" y2="3.075" width="0.2032" layer="21"/>
+<wire x1="7.9" y1="3.075" x2="7.9" y2="-1.935" width="0.2032" layer="21"/>
+<wire x1="-7.9" y1="-1.935" x2="7.9" y2="-1.935" width="0.2032" layer="51"/>
+<wire x1="-1.85" y1="3" x2="-1.85" y2="-1.875" width="0.01" layer="21" style="shortdash"/>
+<wire x1="1.85" y1="3.05" x2="1.85" y2="-1.875" width="0.01" layer="21" style="shortdash"/>
+<wire x1="6.705" y1="-1.935" x2="7.9" y2="-1.935" width="0.2032" layer="21"/>
+<wire x1="-3.455" y1="-1.935" x2="3.455" y2="-1.935" width="0.2032" layer="21"/>
+<wire x1="-7.9" y1="-1.935" x2="-6.705" y2="-1.935" width="0.2032" layer="21"/>
+<pad name="1" x="-5.08" y="0" drill="2" diameter="4"/>
+<pad name="2" x="5.08" y="0" drill="2" diameter="4"/>
+<text x="-7.62" y="3.81" size="1.27" layer="25">&gt;NAME</text>
+<text x="-6.985" y="-3.81" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="TO-247-2H">
+<description>&lt;b&gt;TO-247 Style  Power Package&lt;/b&gt; horizontal mounting&lt;p&gt;
+Source: www.token.com.tw .. power-resistor-rmg100pdf</description>
+<wire x1="-7.9" y1="5.5" x2="7.9" y2="5.5" width="0.2032" layer="21"/>
+<wire x1="-7.9" y1="-15.3" x2="-7.9" y2="5.5" width="0.2032" layer="21"/>
+<wire x1="7.9" y1="5.5" x2="7.9" y2="-15.3" width="0.2032" layer="21"/>
+<wire x1="-7.9" y1="-15.3" x2="7.9" y2="-15.3" width="0.2032" layer="21"/>
+<wire x1="-5.08" y1="-21.59" x2="-5.08" y2="-18.6" width="1.6" layer="51"/>
+<wire x1="5.08" y1="-21.59" x2="5.08" y2="-18.6" width="1.6" layer="51"/>
+<pad name="1" x="-5.08" y="-21.59" drill="2" diameter="4"/>
+<pad name="2" x="5.08" y="-21.59" drill="2" diameter="4"/>
+<text x="-7.62" y="6.35" size="1.27" layer="25">&gt;NAME</text>
+<text x="-6.35" y="-6.35" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-7" y1="-18.875" x2="-3.175" y2="-15.3" layer="51"/>
+<rectangle x1="3.16" y1="-18.875" x2="6.985" y2="-15.3" layer="51"/>
+<hole x="0" y="0" drill="3.7"/>
+</package>
+</packages>
+<symbols>
+<symbol name="R">
+<wire x1="-3.81" y1="-0.889" x2="3.81" y2="-0.889" width="0.254" layer="94"/>
+<wire x1="3.81" y1="-0.889" x2="3.81" y2="0" width="0.254" layer="94"/>
+<wire x1="3.81" y1="0.889" x2="-3.81" y2="0.889" width="0.254" layer="94"/>
+<wire x1="-3.81" y1="-0.889" x2="-3.81" y2="0" width="0.254" layer="94"/>
+<wire x1="3.81" y1="0" x2="5.08" y2="0" width="0.1524" layer="94"/>
+<wire x1="3.81" y1="0" x2="3.81" y2="0.889" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="0" x2="-3.81" y2="0" width="0.1524" layer="94"/>
+<wire x1="-3.81" y1="0" x2="-3.81" y2="0.889" width="0.254" layer="94"/>
+<text x="-3.81" y="1.3716" size="1.778" layer="95">&gt;NAME</text>
+<text x="-3.81" y="-2.921" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="2" x="5.08" y="0" visible="off" length="point" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="1" x="-5.08" y="0" visible="off" length="point" direction="pas" swaplevel="1"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="RMG100" prefix="R" uservalue="yes">
+<description>&lt;b&gt;TO-247 Power Resistor - RMG 100 Series&lt;/b&gt;&lt;p&gt;
+Source: www.token.com.tw .. power-resistor-rmg100pdf</description>
+<gates>
+<gate name="G$1" symbol="R" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-V" package="TO-247-2V">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-H" package="TO-247-2H">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -444,10 +601,18 @@ http://www.st.com&lt;p&gt;
 <part name="ALIMENTAÇAOEXTERNA" library="con-molex" deviceset="22-23-2021" device=""/>
 <part name="ENTRADA-RODAS-01" library="con-molex" deviceset="22-23-2021" device=""/>
 <part name="ENTRADA-RODAS-02" library="con-molex" deviceset="22-23-2021" device=""/>
-<part name="SENSOR" library="con-molex" deviceset="22-23-2041" device=""/>
 <part name="SERVO-001" library="con-molex" deviceset="22-23-2031" device=""/>
 <part name="SERVO-002" library="con-molex" deviceset="22-23-2031" device=""/>
 <part name="SERVO-003" library="con-molex" deviceset="22-23-2031" device=""/>
+<part name="SENSOR-D12-D13" library="con-molex" deviceset="22-23-2041" device=""/>
+<part name="ALIMENTAÇAO-ARDUINO" library="con-molex" deviceset="22-23-2021" device=""/>
+<part name="ANALOGICA-A0-A1" library="con-molex" deviceset="22-23-2041" device=""/>
+<part name="X2" library="con-molex" deviceset="22-23-2041" device=""/>
+<part name="X3" library="con-molex" deviceset="22-23-2041" device=""/>
+<part name="X4" library="con-molex" deviceset="22-23-2041" device=""/>
+<part name="BUZZER" library="buzzer" deviceset="EB2209A" device=""/>
+<part name="R1" library="resistor-power" deviceset="RMG100" device="-V" value="150"/>
+<part name="BLUETOOTH" library="con-molex" deviceset="22-23-2041" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -462,10 +627,6 @@ http://www.st.com&lt;p&gt;
 <instance part="ENTRADA-RODAS-01" gate="-2" x="35.56" y="68.58" rot="R180"/>
 <instance part="ENTRADA-RODAS-02" gate="-1" x="93.98" y="68.58"/>
 <instance part="ENTRADA-RODAS-02" gate="-2" x="93.98" y="66.04"/>
-<instance part="SENSOR" gate="-1" x="30.48" y="101.6" rot="R180"/>
-<instance part="SENSOR" gate="-2" x="30.48" y="104.14" rot="R180"/>
-<instance part="SENSOR" gate="-3" x="30.48" y="106.68" rot="R180"/>
-<instance part="SENSOR" gate="-4" x="30.48" y="109.22" rot="R180"/>
 <instance part="SERVO-001" gate="-1" x="73.66" y="104.14" rot="R180"/>
 <instance part="SERVO-001" gate="-2" x="73.66" y="106.68" rot="R180"/>
 <instance part="SERVO-001" gate="-3" x="73.66" y="109.22" rot="R180"/>
@@ -475,6 +636,34 @@ http://www.st.com&lt;p&gt;
 <instance part="SERVO-003" gate="-1" x="127" y="104.14" rot="R180"/>
 <instance part="SERVO-003" gate="-2" x="127" y="106.68" rot="R180"/>
 <instance part="SERVO-003" gate="-3" x="127" y="109.22" rot="R180"/>
+<instance part="SENSOR-D12-D13" gate="-1" x="132.08" y="27.94" rot="R180"/>
+<instance part="SENSOR-D12-D13" gate="-2" x="132.08" y="30.48" rot="R180"/>
+<instance part="SENSOR-D12-D13" gate="-3" x="132.08" y="33.02" rot="R180"/>
+<instance part="SENSOR-D12-D13" gate="-4" x="132.08" y="35.56" rot="R180"/>
+<instance part="ALIMENTAÇAO-ARDUINO" gate="-1" x="205.74" y="111.76"/>
+<instance part="ALIMENTAÇAO-ARDUINO" gate="-2" x="205.74" y="109.22"/>
+<instance part="ANALOGICA-A0-A1" gate="-1" x="213.36" y="78.74"/>
+<instance part="ANALOGICA-A0-A1" gate="-2" x="213.36" y="76.2"/>
+<instance part="ANALOGICA-A0-A1" gate="-3" x="213.36" y="73.66"/>
+<instance part="ANALOGICA-A0-A1" gate="-4" x="213.36" y="71.12"/>
+<instance part="X2" gate="-1" x="213.36" y="66.04"/>
+<instance part="X2" gate="-2" x="213.36" y="63.5"/>
+<instance part="X2" gate="-3" x="213.36" y="60.96"/>
+<instance part="X2" gate="-4" x="213.36" y="58.42"/>
+<instance part="X3" gate="-1" x="213.36" y="53.34"/>
+<instance part="X3" gate="-2" x="213.36" y="50.8"/>
+<instance part="X3" gate="-3" x="213.36" y="48.26"/>
+<instance part="X3" gate="-4" x="213.36" y="45.72"/>
+<instance part="X4" gate="-1" x="213.36" y="40.64"/>
+<instance part="X4" gate="-2" x="213.36" y="38.1"/>
+<instance part="X4" gate="-3" x="213.36" y="35.56"/>
+<instance part="X4" gate="-4" x="213.36" y="33.02"/>
+<instance part="BUZZER" gate="G$1" x="203.2" y="99.06" rot="R90"/>
+<instance part="R1" gate="G$1" x="193.04" y="83.82" rot="R90"/>
+<instance part="BLUETOOTH" gate="-1" x="149.86" y="121.92" rot="R90"/>
+<instance part="BLUETOOTH" gate="-2" x="152.4" y="121.92" rot="R90"/>
+<instance part="BLUETOOTH" gate="-3" x="154.94" y="121.92" rot="R90"/>
+<instance part="BLUETOOTH" gate="-4" x="157.48" y="121.92" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -587,7 +776,9 @@ http://www.st.com&lt;p&gt;
 <pinref part="U$1" gate="G$1" pin="+5V"/>
 <wire x1="180.34" y1="83.82" x2="165.1" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="165.1" y1="83.82" x2="165.1" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="165.1" y1="111.76" x2="129.54" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="111.76" x2="154.94" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="111.76" x2="144.78" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="111.76" x2="129.54" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="129.54" y1="111.76" x2="104.14" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="104.14" y1="111.76" x2="76.2" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="111.76" x2="63.5" y2="111.76" width="0.1524" layer="91"/>
@@ -603,6 +794,30 @@ http://www.st.com&lt;p&gt;
 <pinref part="SERVO-001" gate="-3" pin="S"/>
 <wire x1="76.2" y1="111.76" x2="76.2" y2="109.22" width="0.1524" layer="91"/>
 <junction x="76.2" y="111.76"/>
+<wire x1="144.78" y1="111.76" x2="144.78" y2="33.02" width="0.1524" layer="91"/>
+<junction x="144.78" y="111.76"/>
+<pinref part="SENSOR-D12-D13" gate="-3" pin="S"/>
+<wire x1="144.78" y1="33.02" x2="134.62" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="83.82" x2="165.1" y2="71.12" width="0.1524" layer="91"/>
+<junction x="165.1" y="83.82"/>
+<pinref part="ANALOGICA-A0-A1" gate="-4" pin="S"/>
+<wire x1="165.1" y1="71.12" x2="187.96" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="71.12" x2="210.82" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="71.12" x2="187.96" y2="58.42" width="0.1524" layer="91"/>
+<junction x="187.96" y="71.12"/>
+<pinref part="X2" gate="-4" pin="S"/>
+<wire x1="187.96" y1="58.42" x2="210.82" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="58.42" x2="187.96" y2="45.72" width="0.1524" layer="91"/>
+<junction x="187.96" y="58.42"/>
+<pinref part="X3" gate="-4" pin="S"/>
+<wire x1="187.96" y1="45.72" x2="210.82" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="45.72" x2="187.96" y2="33.02" width="0.1524" layer="91"/>
+<junction x="187.96" y="45.72"/>
+<pinref part="X4" gate="-4" pin="S"/>
+<wire x1="187.96" y1="33.02" x2="210.82" y2="33.02" width="0.1524" layer="91"/>
+<pinref part="BLUETOOTH" gate="-3" pin="S"/>
+<wire x1="154.94" y1="111.76" x2="154.94" y2="119.38" width="0.1524" layer="91"/>
+<junction x="154.94" y="111.76"/>
 </segment>
 </net>
 <net name="N$11" class="0">
@@ -637,8 +852,11 @@ http://www.st.com&lt;p&gt;
 <segment>
 <pinref part="U$1" gate="G$1" pin="GND1"/>
 <wire x1="180.34" y1="93.98" x2="167.64" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="167.64" y1="93.98" x2="167.64" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="167.64" y1="116.84" x2="132.08" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="93.98" x2="167.64" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="106.68" x2="167.64" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="116.84" x2="157.48" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="116.84" x2="137.16" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="116.84" x2="132.08" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="132.08" y1="116.84" x2="106.68" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="116.84" x2="78.74" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="116.84" x2="78.74" y2="106.68" width="0.1524" layer="91"/>
@@ -650,6 +868,42 @@ http://www.st.com&lt;p&gt;
 <wire x1="132.08" y1="116.84" x2="132.08" y2="106.68" width="0.1524" layer="91"/>
 <pinref part="SERVO-003" gate="-2" pin="S"/>
 <wire x1="132.08" y1="106.68" x2="129.54" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="116.84" x2="137.16" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="SENSOR-D12-D13" gate="-4" pin="S"/>
+<wire x1="137.16" y1="35.56" x2="134.62" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="116.84" x2="200.66" y2="116.84" width="0.1524" layer="91"/>
+<junction x="167.64" y="116.84"/>
+<wire x1="200.66" y1="116.84" x2="200.66" y2="111.76" width="0.1524" layer="91"/>
+<pinref part="ALIMENTAÇAO-ARDUINO" gate="-1" pin="S"/>
+<wire x1="200.66" y1="111.76" x2="203.2" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="93.98" x2="187.96" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="93.98" x2="208.28" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="93.98" x2="208.28" y2="73.66" width="0.1524" layer="91"/>
+<junction x="180.34" y="93.98"/>
+<pinref part="ANALOGICA-A0-A1" gate="-3" pin="S"/>
+<wire x1="208.28" y1="73.66" x2="210.82" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="93.98" x2="187.96" y2="91.44" width="0.1524" layer="91"/>
+<junction x="187.96" y="93.98"/>
+<wire x1="187.96" y1="91.44" x2="218.44" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="91.44" x2="218.44" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="BUZZER" gate="G$1" pin="-"/>
+<wire x1="218.44" y1="104.14" x2="205.74" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="106.68" x2="190.5" y2="106.68" width="0.1524" layer="91"/>
+<junction x="167.64" y="106.68"/>
+<wire x1="190.5" y1="106.68" x2="190.5" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="X2" gate="-3" pin="S"/>
+<wire x1="190.5" y1="60.96" x2="210.82" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="60.96" x2="190.5" y2="48.26" width="0.1524" layer="91"/>
+<junction x="190.5" y="60.96"/>
+<pinref part="X3" gate="-3" pin="S"/>
+<wire x1="190.5" y1="48.26" x2="210.82" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="48.26" x2="190.5" y2="35.56" width="0.1524" layer="91"/>
+<junction x="190.5" y="48.26"/>
+<pinref part="X4" gate="-3" pin="S"/>
+<wire x1="190.5" y1="35.56" x2="210.82" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="BLUETOOTH" gate="-4" pin="S"/>
+<wire x1="157.48" y1="116.84" x2="157.48" y2="119.38" width="0.1524" layer="91"/>
+<junction x="157.48" y="116.84"/>
 </segment>
 </net>
 <net name="N$14" class="0">
@@ -681,6 +935,132 @@ http://www.st.com&lt;p&gt;
 <wire x1="132.08" y1="93.98" x2="132.08" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="SERVO-003" gate="-1" pin="S"/>
 <wire x1="132.08" y1="104.14" x2="129.54" y2="104.14" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$17" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="D12"/>
+<pinref part="SENSOR-D12-D13" gate="-1" pin="S"/>
+<wire x1="149.86" y1="27.94" x2="134.62" y2="27.94" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$18" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="D11"/>
+<wire x1="149.86" y1="33.02" x2="147.32" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="33.02" x2="147.32" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="SENSOR-D12-D13" gate="-2" pin="S"/>
+<wire x1="147.32" y1="30.48" x2="134.62" y2="30.48" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$19" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="VIN"/>
+<wire x1="180.34" y1="99.06" x2="193.04" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="99.06" x2="193.04" y2="109.22" width="0.1524" layer="91"/>
+<pinref part="ALIMENTAÇAO-ARDUINO" gate="-2" pin="S"/>
+<wire x1="193.04" y1="109.22" x2="203.2" y2="109.22" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$20" class="0">
+<segment>
+<pinref part="R1" gate="G$1" pin="2"/>
+<pinref part="BUZZER" gate="G$1" pin="+"/>
+<wire x1="193.04" y1="88.9" x2="205.74" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="88.9" x2="205.74" y2="96.52" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$21" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="A0"/>
+<pinref part="R1" gate="G$1" pin="1"/>
+<wire x1="180.34" y1="78.74" x2="193.04" y2="78.74" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$22" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="A1"/>
+<wire x1="180.34" y1="73.66" x2="200.66" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="73.66" x2="200.66" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="ANALOGICA-A0-A1" gate="-1" pin="S"/>
+<wire x1="200.66" y1="78.74" x2="210.82" y2="78.74" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$23" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="A2"/>
+<wire x1="180.34" y1="68.58" x2="205.74" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="68.58" x2="205.74" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="ANALOGICA-A0-A1" gate="-2" pin="S"/>
+<wire x1="205.74" y1="76.2" x2="210.82" y2="76.2" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$24" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="A3"/>
+<wire x1="180.34" y1="63.5" x2="182.88" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="63.5" x2="182.88" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="X2" gate="-1" pin="S"/>
+<wire x1="182.88" y1="66.04" x2="210.82" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$25" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="A4"/>
+<wire x1="180.34" y1="58.42" x2="185.42" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="58.42" x2="185.42" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="X2" gate="-2" pin="S"/>
+<wire x1="185.42" y1="63.5" x2="210.82" y2="63.5" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$26" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="A5"/>
+<pinref part="X3" gate="-1" pin="S"/>
+<wire x1="180.34" y1="53.34" x2="210.82" y2="53.34" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$27" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="A6"/>
+<wire x1="180.34" y1="48.26" x2="182.88" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="48.26" x2="182.88" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="X3" gate="-2" pin="S"/>
+<wire x1="182.88" y1="50.8" x2="210.82" y2="50.8" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$28" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="A7"/>
+<pinref part="X4" gate="-1" pin="S"/>
+<wire x1="180.34" y1="43.18" x2="210.82" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="43.18" x2="210.82" y2="40.64" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$29" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="D13"/>
+<wire x1="180.34" y1="27.94" x2="195.58" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="27.94" x2="195.58" y2="38.1" width="0.1524" layer="91"/>
+<pinref part="X4" gate="-2" pin="S"/>
+<wire x1="195.58" y1="38.1" x2="210.82" y2="38.1" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$30" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="D1/TX"/>
+<pinref part="BLUETOOTH" gate="-1" pin="S"/>
+<wire x1="149.86" y1="99.06" x2="149.86" y2="119.38" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$31" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="D0/RX"/>
+<wire x1="149.86" y1="93.98" x2="147.32" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="93.98" x2="147.32" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="104.14" x2="152.4" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="BLUETOOTH" gate="-2" pin="S"/>
+<wire x1="152.4" y1="104.14" x2="152.4" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
