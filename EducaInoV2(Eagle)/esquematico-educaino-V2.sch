@@ -322,6 +322,21 @@ http://www.st.com&lt;p&gt;
 <text x="-5.08" y="3.81" size="1.016" layer="25" ratio="10">&gt;NAME</text>
 <text x="-5.08" y="-5.08" size="1.016" layer="27" ratio="10">&gt;VALUE</text>
 </package>
+<package name="22-23-2031">
+<description>.100" (2.54mm) Center Header - 3 Pin</description>
+<wire x1="-3.81" y1="3.175" x2="3.81" y2="3.175" width="0.254" layer="21"/>
+<wire x1="3.81" y1="3.175" x2="3.81" y2="1.27" width="0.254" layer="21"/>
+<wire x1="3.81" y1="1.27" x2="3.81" y2="-3.175" width="0.254" layer="21"/>
+<wire x1="3.81" y1="-3.175" x2="-3.81" y2="-3.175" width="0.254" layer="21"/>
+<wire x1="-3.81" y1="-3.175" x2="-3.81" y2="1.27" width="0.254" layer="21"/>
+<wire x1="-3.81" y1="1.27" x2="-3.81" y2="3.175" width="0.254" layer="21"/>
+<wire x1="-3.81" y1="1.27" x2="3.81" y2="1.27" width="0.254" layer="21"/>
+<pad name="1" x="-2.54" y="0" drill="1" shape="long" rot="R90"/>
+<pad name="2" x="0" y="0" drill="1" shape="long" rot="R90"/>
+<pad name="3" x="2.54" y="0" drill="1" shape="long" rot="R90"/>
+<text x="-3.81" y="3.81" size="1.016" layer="25" ratio="10">&gt;NAME</text>
+<text x="-3.81" y="-5.08" size="1.016" layer="27" ratio="10">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="MV">
@@ -387,6 +402,31 @@ http://www.st.com&lt;p&gt;
 </device>
 </devices>
 </deviceset>
+<deviceset name="22-23-2031" prefix="X">
+<description>.100" (2.54mm) Center Header - 3 Pin</description>
+<gates>
+<gate name="-1" symbol="MV" x="0" y="2.54" addlevel="always" swaplevel="1"/>
+<gate name="-2" symbol="M" x="0" y="0" addlevel="always" swaplevel="1"/>
+<gate name="-3" symbol="M" x="0" y="-2.54" addlevel="always" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="22-23-2031">
+<connects>
+<connect gate="-1" pin="S" pad="1"/>
+<connect gate="-2" pin="S" pad="2"/>
+<connect gate="-3" pin="S" pad="3"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="MOLEX" constant="no"/>
+<attribute name="MPN" value="22-23-2031" constant="no"/>
+<attribute name="OC_FARNELL" value="1462950" constant="no"/>
+<attribute name="OC_NEWARK" value="30C0862" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -405,6 +445,9 @@ http://www.st.com&lt;p&gt;
 <part name="ENTRADA-RODAS-01" library="con-molex" deviceset="22-23-2021" device=""/>
 <part name="ENTRADA-RODAS-02" library="con-molex" deviceset="22-23-2021" device=""/>
 <part name="SENSOR" library="con-molex" deviceset="22-23-2041" device=""/>
+<part name="SERVO-001" library="con-molex" deviceset="22-23-2031" device=""/>
+<part name="SERVO-002" library="con-molex" deviceset="22-23-2031" device=""/>
+<part name="SERVO-003" library="con-molex" deviceset="22-23-2031" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -423,6 +466,15 @@ http://www.st.com&lt;p&gt;
 <instance part="SENSOR" gate="-2" x="30.48" y="104.14" rot="R180"/>
 <instance part="SENSOR" gate="-3" x="30.48" y="106.68" rot="R180"/>
 <instance part="SENSOR" gate="-4" x="30.48" y="109.22" rot="R180"/>
+<instance part="SERVO-001" gate="-1" x="73.66" y="104.14" rot="R180"/>
+<instance part="SERVO-001" gate="-2" x="73.66" y="106.68" rot="R180"/>
+<instance part="SERVO-001" gate="-3" x="73.66" y="109.22" rot="R180"/>
+<instance part="SERVO-002" gate="-1" x="101.6" y="104.14" rot="R180"/>
+<instance part="SERVO-002" gate="-2" x="101.6" y="106.68" rot="R180"/>
+<instance part="SERVO-002" gate="-3" x="101.6" y="109.22" rot="R180"/>
+<instance part="SERVO-003" gate="-1" x="127" y="104.14" rot="R180"/>
+<instance part="SERVO-003" gate="-2" x="127" y="106.68" rot="R180"/>
+<instance part="SERVO-003" gate="-3" x="127" y="109.22" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -441,27 +493,14 @@ http://www.st.com&lt;p&gt;
 <pinref part="CI-L293D" gate="G$1" pin="GND3"/>
 <pinref part="CI-L293D" gate="G$1" pin="GND4"/>
 <wire x1="78.74" y1="48.26" x2="78.74" y2="45.72" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="GND"/>
 <wire x1="78.74" y1="45.72" x2="78.74" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="83.82" x2="106.68" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="83.82" x2="106.68" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="43.18" x2="78.74" y2="43.18" width="0.1524" layer="91"/>
-<junction x="78.74" y="43.18"/>
 <wire x1="48.26" y1="45.72" x2="78.74" y2="45.72" width="0.1524" layer="91"/>
 <junction x="48.26" y="45.72"/>
 <junction x="78.74" y="45.72"/>
-</segment>
-</net>
-<net name="N$4" class="0">
-<segment>
-<pinref part="CI-L293D" gate="G$1" pin="3-4EN"/>
-<wire x1="78.74" y1="27.94" x2="63.5" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="63.5" y1="27.94" x2="63.5" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="CI-L293D" gate="G$1" pin="VCC1"/>
-<wire x1="63.5" y1="63.5" x2="78.74" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="CI-L293D" gate="G$1" pin="1-2EN"/>
-<wire x1="48.26" y1="63.5" x2="63.5" y2="63.5" width="0.1524" layer="91"/>
-<junction x="63.5" y="63.5"/>
+<wire x1="78.74" y1="45.72" x2="96.52" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="45.72" x2="96.52" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="GND"/>
+<wire x1="96.52" y1="83.82" x2="149.86" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -511,46 +550,137 @@ http://www.st.com&lt;p&gt;
 <wire x1="88.9" y1="66.04" x2="91.44" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$10" class="0">
+<net name="N$2" class="0">
 <segment>
-<pinref part="CI-L293D" gate="G$1" pin="2A"/>
-<wire x1="48.26" y1="33.02" x2="58.42" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="33.02" x2="58.42" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="35.56" x2="109.22" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="35.56" x2="109.22" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="D7"/>
-<wire x1="109.22" y1="55.88" x2="149.86" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="55.88" x2="149.86" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="53.34" x2="99.06" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="53.34" x2="99.06" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="7.62" x2="58.42" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="7.62" x2="58.42" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="CI-L293D" gate="G$1" pin="1-2EN"/>
+<wire x1="58.42" y1="63.5" x2="48.26" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$9" class="0">
 <segment>
 <pinref part="CI-L293D" gate="G$1" pin="1A"/>
 <wire x1="48.26" y1="58.42" x2="60.96" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="58.42" x2="60.96" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="55.88" x2="99.06" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="99.06" y1="55.88" x2="99.06" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="D6"/>
-<wire x1="99.06" y1="58.42" x2="149.86" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="58.42" x2="60.96" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="10.16" x2="101.6" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="10.16" x2="101.6" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="58.42" x2="152.4" y2="58.42" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$10" class="0">
+<segment>
+<pinref part="CI-L293D" gate="G$1" pin="2A"/>
+<wire x1="48.26" y1="33.02" x2="45.72" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="33.02" x2="45.72" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="12.7" x2="104.14" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="12.7" x2="104.14" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="D5"/>
+<wire x1="104.14" y1="63.5" x2="149.86" y2="63.5" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="SERVO-001" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="+5V"/>
+<wire x1="180.34" y1="83.82" x2="165.1" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="83.82" x2="165.1" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="111.76" x2="129.54" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="111.76" x2="104.14" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="111.76" x2="76.2" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="111.76" x2="63.5" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="111.76" x2="63.5" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="CI-L293D" gate="G$1" pin="VCC1"/>
+<wire x1="63.5" y1="63.5" x2="78.74" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="SERVO-002" gate="-3" pin="S"/>
+<wire x1="104.14" y1="111.76" x2="104.14" y2="109.22" width="0.1524" layer="91"/>
+<junction x="104.14" y="111.76"/>
+<pinref part="SERVO-003" gate="-3" pin="S"/>
+<wire x1="129.54" y1="111.76" x2="129.54" y2="109.22" width="0.1524" layer="91"/>
+<junction x="129.54" y="111.76"/>
+<pinref part="SERVO-001" gate="-3" pin="S"/>
+<wire x1="76.2" y1="111.76" x2="76.2" y2="109.22" width="0.1524" layer="91"/>
+<junction x="76.2" y="111.76"/>
 </segment>
 </net>
 <net name="N$11" class="0">
 <segment>
 <pinref part="CI-L293D" gate="G$1" pin="4A"/>
 <wire x1="78.74" y1="58.42" x2="81.28" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="58.42" x2="81.28" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="60.96" x2="109.22" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="60.96" x2="109.22" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="78.74" x2="152.4" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="58.42" x2="81.28" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="D2"/>
+<wire x1="81.28" y1="81.28" x2="149.86" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="81.28" x2="149.86" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$12" class="0">
 <segment>
 <pinref part="CI-L293D" gate="G$1" pin="3A"/>
-<wire x1="78.74" y1="33.02" x2="111.76" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="33.02" x2="111.76" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="33.02" x2="106.68" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="33.02" x2="106.68" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="73.66" x2="152.4" y2="73.66" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$13" class="0">
+<segment>
+<pinref part="CI-L293D" gate="G$1" pin="3-4EN"/>
+<wire x1="78.74" y1="27.94" x2="109.22" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="27.94" x2="109.22" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="D4"/>
-<wire x1="111.76" y1="68.58" x2="149.86" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="71.12" x2="149.86" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="71.12" x2="149.86" y2="68.58" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="GND1"/>
+<wire x1="180.34" y1="93.98" x2="167.64" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="93.98" x2="167.64" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="116.84" x2="132.08" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="116.84" x2="106.68" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="116.84" x2="78.74" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="116.84" x2="78.74" y2="106.68" width="0.1524" layer="91"/>
+<pinref part="SERVO-001" gate="-2" pin="S"/>
+<wire x1="78.74" y1="106.68" x2="76.2" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="116.84" x2="106.68" y2="106.68" width="0.1524" layer="91"/>
+<pinref part="SERVO-002" gate="-2" pin="S"/>
+<wire x1="106.68" y1="106.68" x2="104.14" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="116.84" x2="132.08" y2="106.68" width="0.1524" layer="91"/>
+<pinref part="SERVO-003" gate="-2" pin="S"/>
+<wire x1="132.08" y1="106.68" x2="129.54" y2="106.68" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$14" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="D8"/>
+<wire x1="149.86" y1="48.26" x2="111.76" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="48.26" x2="111.76" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="86.36" x2="78.74" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="86.36" x2="78.74" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="SERVO-001" gate="-1" pin="S"/>
+<wire x1="78.74" y1="104.14" x2="76.2" y2="104.14" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$15" class="0">
+<segment>
+<wire x1="152.4" y1="43.18" x2="114.3" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="43.18" x2="114.3" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="88.9" x2="106.68" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="88.9" x2="106.68" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="104.14" x2="101.6" y2="104.14" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$16" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="D10"/>
+<wire x1="149.86" y1="38.1" x2="116.84" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="38.1" x2="116.84" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="93.98" x2="132.08" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="93.98" x2="132.08" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="SERVO-003" gate="-1" pin="S"/>
+<wire x1="132.08" y1="104.14" x2="129.54" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
